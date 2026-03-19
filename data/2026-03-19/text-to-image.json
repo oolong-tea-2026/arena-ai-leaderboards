@@ -155,7 +155,7 @@
       "rank": 17,
       "model": "qwen-image-2512",
       "vendor": "Alibaba",
-      "license": "Apache 2.0",
+      "license": "open",
       "score": 1139,
       "ci": 4,
       "votes": 41841
@@ -263,7 +263,7 @@
       "rank": 29,
       "model": "z-image-turbo",
       "vendor": "Alibaba",
-      "license": "Apache 2.0",
+      "license": "open",
       "score": 1080,
       "ci": 7,
       "votes": 10360
@@ -281,7 +281,7 @@
       "rank": 31,
       "model": "flux-2-klein-9b",
       "vendor": "Black Forest Labs",
-      "license": "flux-non-commercial-license",
+      "license": "open",
       "score": 1066,
       "ci": 4,
       "votes": 46044
@@ -290,7 +290,7 @@
       "rank": 32,
       "model": "qwen-image-prompt-extend",
       "vendor": "Alibaba",
-      "license": "Apache 2.0",
+      "license": "open",
       "score": 1061,
       "ci": 3,
       "votes": 598950
@@ -317,7 +317,7 @@
       "rank": 35,
       "model": "qwen-image",
       "vendor": "Alibaba",
-      "license": "Apache 2.0",
+      "license": "open",
       "score": 1058,
       "ci": 2,
       "votes": 86001
@@ -353,7 +353,7 @@
       "rank": 39,
       "model": "flux-2-klein-4b",
       "vendor": "Black Forest Labs",
-      "license": "Apache 2.0",
+      "license": "open",
       "score": 1021,
       "ci": 4,
       "votes": 46492
@@ -398,7 +398,7 @@
       "rank": 44,
       "model": "glm-image",
       "vendor": "Z.ai",
-      "license": "MIT",
+      "license": "open",
       "score": 1012,
       "ci": 9,
       "votes": 4677
@@ -434,7 +434,7 @@
       "rank": 48,
       "model": "flux-1-kontext-dev",
       "vendor": "Black Forest Labs",
-      "license": "flux-1-dev-non-commercial-license",
+      "license": "open",
       "score": 942,
       "ci": 4,
       "votes": 216999
@@ -452,7 +452,7 @@
       "rank": 50,
       "model": "bagel",
       "vendor": "Bytedance",
-      "license": "Apache 2.0",
+      "license": "open",
       "score": 899,
       "ci": 6,
       "votes": 12456

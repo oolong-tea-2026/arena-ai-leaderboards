@@ -236,7 +236,7 @@
       "rank": 26,
       "model": "kandinsky-5.0-t2v-pro",
       "vendor": "Kandinsky",
-      "license": "MIT",
+      "license": "open",
       "score": 1179,
       "ci": 21,
       "votes": 1886
@@ -245,7 +245,7 @@
       "rank": 27,
       "model": "hunyuan-video-1.5",
       "vendor": "Tencent",
-      "license": "tencent-hunyuan-community",
+      "license": "open",
       "score": 1171,
       "ci": 16,
       "votes": 4097
@@ -272,7 +272,7 @@
       "rank": 30,
       "model": "wan-v2.2-a14b",
       "vendor": "Alibaba",
-      "license": "Apache 2.0",
+      "license": "open",
       "score": 1130,
       "ci": 15,
       "votes": 11158
@@ -281,7 +281,7 @@
       "rank": 31,
       "model": "ltx-2-19b",
       "vendor": "lightricks",
-      "license": "ltx-2-community-license-agreement",
+      "license": "open",
       "score": 1122,
       "ci": 10,
       "votes": 21120
@@ -299,7 +299,7 @@
       "rank": 33,
       "model": "kandinsky-5.0-t2v-lite",
       "vendor": "Kandinsky",
-      "license": "MIT",
+      "license": "open",
       "score": 1112,
       "ci": 18,
       "votes": 1353
@@ -335,7 +335,7 @@
       "rank": 37,
       "model": "mochi-v1",
       "vendor": "Genmo AI",
-      "license": "Apache 2.0",
+      "license": "open",
       "score": 999,
       "ci": 16,
       "votes": 6676

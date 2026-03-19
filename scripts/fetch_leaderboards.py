@@ -87,7 +87,7 @@ Rules:
 - "rank": integer rank
 - "model": exact model name string as displayed
 - "vendor": organization/company name (e.g., "OpenAI", "Google", "Anthropic", "xAI", "Meta"). null if not shown
-- "license": "proprietary" or "open" or null if not shown
+- "license": MUST be exactly "proprietary" or "open". Map any open-source license (MIT, Apache, etc.) to "open". null only if not shown
 - "score": the ELO/Arena score as integer
 - "ci": the confidence interval number (e.g., if shown as "±8" or "1502±8", extract 8). null if not shown
 - "votes": vote count as integer. Remove commas
@@ -257,6 +257,18 @@ def main():
                 m.setdefault("score", None)
                 m.setdefault("ci", None)
                 m.setdefault("votes", None)
+                # Normalize license to "proprietary" | "open" | null
+                lic = m.get("license")
+                if isinstance(lic, str):
+                    lic_lower = lic.lower()
+                    if lic_lower == "proprietary":
+                        m["license"] = "proprietary"
+                    elif lic_lower in ("open", "open source", "open-source"):
+                        m["license"] = "open"
+                    elif any(kw in lic_lower for kw in ("mit", "apache", "bsd", "gpl", "cc-", "community", "non-commercial")):
+                        m["license"] = "open"
+                    else:
+                        m["license"] = "open"  # default non-proprietary to open
 
             # Write
             fp = day_dir / f"{slug}.json"
@@ -292,6 +304,11 @@ def main():
         print(f"Errors: {len(errors)}", file=sys.stderr)
         for e in errors:
             print(f"  {e['leaderboard']}: {e['error']}", file=sys.stderr)
+        sys.exit(1)
+    
+    # If any leaderboard failed, exit non-zero (partial failure)
+    if len(results) < len(leaderboards):
+        print(f"FAIL: only {len(results)}/{len(leaderboards)} succeeded", file=sys.stderr)
         sys.exit(1)
 
 

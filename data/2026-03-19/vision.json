@@ -92,7 +92,7 @@
       "rank": 10,
       "model": "kimi-k2.5-thinking",
       "vendor": "Moonshot",
-      "license": "Modified MIT",
+      "license": "open",
       "score": 1245,
       "ci": 10,
       "votes": 6469
@@ -101,7 +101,7 @@
       "rank": 11,
       "model": "kimi-k2.5-instant",
       "vendor": "Moonshot",
-      "license": "Modified MIT",
+      "license": "open",
       "score": 1242,
       "ci": 11,
       "votes": 5187
@@ -128,7 +128,7 @@
       "rank": 14,
       "model": "qwen3.5-397b-a17b",
       "vendor": "Alibaba",
-      "license": "Apache 2.0",
+      "license": "open",
       "score": 1239,
       "ci": 11,
       "votes": 3798
@@ -155,7 +155,7 @@
       "rank": 17,
       "model": "qwen3.5-27b",
       "vendor": "Alibaba",
-      "license": "Apache 2.0",
+      "license": "open",
       "score": 1227,
       "ci": 16,
       "votes": 1446
@@ -191,7 +191,7 @@
       "rank": 21,
       "model": "qwen3-vl-235b-a22b-instruct",
       "vendor": "Alibaba",
-      "license": "Apache 2.0",
+      "license": "open",
       "score": 1217,
       "ci": 8,
       "votes": 12288
@@ -227,7 +227,7 @@
       "rank": 25,
       "model": "qwen3.5-122b-a10b",
       "vendor": "Alibaba",
-      "license": "Apache 2.0",
+      "license": "open",
       "score": 1210,
       "ci": 15,
       "votes": 1634

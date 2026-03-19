@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Arena Leaderboard",
+  "description": "A single leaderboard snapshot from arena.ai",
+  "type": "object",
+  "required": ["meta", "models"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["leaderboard", "source_url", "fetched_at", "model_count"],
+      "additionalProperties": false,
+      "properties": {
+        "leaderboard": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "source_url": { "type": "string", "format": "uri" },
+        "fetched_at": { "type": "string", "format": "date-time" },
+        "last_updated": { "type": ["string", "null"] },
+        "model_count": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "models": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/model"
+      }
+    }
+  },
+  "$defs": {
+    "model": {
+      "type": "object",
+      "required": ["rank", "model", "vendor", "license", "score", "ci", "votes"],
+      "additionalProperties": false,
+      "properties": {
+        "rank": { "type": "integer", "minimum": 1 },
+        "model": { "type": "string", "minLength": 1 },
+        "vendor": { "type": ["string", "null"] },
+        "license": { "enum": ["proprietary", "open", null] },
+        "score": { "type": ["integer", "null"] },
+        "ci": { "type": ["integer", "null"] },
+        "votes": { "type": ["integer", "null"] }
+      }
+    }
+  }
+}

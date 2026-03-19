@@ -28,6 +28,9 @@ jobs:
           AZURE_API_VERSION: ${{ secrets.AZURE_API_VERSION }}
         run: python scripts/fetch_leaderboards.py
 
+      - name: Validate data against schemas
+        run: python scripts/validate.py
+
       - name: Commit and push
         run: |
           git config user.name "oolong-tea-2026"
