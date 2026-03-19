@@ -1,0 +1,42 @@
+name: Fetch Arena Leaderboards
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Daily at 08:00 UTC (16:00 CST)
+  workflow_dispatch:       # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch leaderboards
+        env:
+          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          AZURE_OPENAI_KEY: ${{ secrets.AZURE_OPENAI_KEY }}
+          AZURE_ENDPOINT: ${{ secrets.AZURE_ENDPOINT }}
+          AZURE_DEPLOYMENT: ${{ secrets.AZURE_DEPLOYMENT }}
+          AZURE_API_VERSION: ${{ secrets.AZURE_API_VERSION }}
+        run: python scripts/fetch_leaderboards.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "oolong-tea-2026"
+          git config user.email "oolongtea202603@163.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            DATE=$(date -u +%Y-%m-%d)
+            git commit -m "data: update leaderboards $DATE"
+            git push
+          fi
