@@ -1,18 +1,12 @@
 #!/usr/bin/env python3
 """
 Fetch arena.ai leaderboard data using Jina Reader + LLM parsing.
-Outputs structured JSON for each leaderboard category.
-
-Usage:
-  # With Azure OpenAI (preferred):
-  AZURE_OPENAI_KEY=xxx AZURE_ENDPOINT=xxx JINA_API_KEY=xxx python fetch_leaderboards.py
-
-  # With OpenAI:
-  OPENAI_API_KEY=xxx JINA_API_KEY=xxx python fetch_leaderboards.py
+Validates each result against JSON Schema before writing.
 """
 
 import json
 import os
+import re
 import sys
 import time
 from datetime import datetime, timezone
@@ -20,11 +14,10 @@ from pathlib import Path
 import urllib.request
 import urllib.error
 
+from jsonschema import Draft202012Validator
+
 JINA_READER_BASE = "https://r.jina.ai/"
 ARENA_BASE = "https://arena.ai/leaderboard/"
-
-# Will be discovered dynamically from overview page
-LEADERBOARDS: list[tuple[str, str]] = []
 
 
 def fetch_page(url: str, jina_api_key: str | None = None) -> str:
@@ -54,14 +47,9 @@ def fetch_page(url: str, jina_api_key: str | None = None) -> str:
 
 def discover_leaderboards(overview_text: str) -> list[tuple[str, str]]:
     """Extract leaderboard slugs from overview page links."""
-    import re
-    # Match links like https://arena.ai/leaderboard/text-to-video
-    pattern = r'arena\.ai/leaderboard/([a-z0-9-]+)'
+    pattern = r'arena\.ai/leaderboard/([a-z][a-z0-9-]*)'
     slugs = sorted(set(re.findall(pattern, overview_text)))
-    # Filter out generic paths
-    exclude = {"", "leaderboard"}
-    result = [(s, s) for s in slugs if s not in exclude]
-    return result
+    return [(s, s) for s in slugs]
 
 
 SYSTEM_PROMPT = """You are a data extraction assistant. Extract the FULL leaderboard table from the provided text.
@@ -95,12 +83,20 @@ Rules:
 - Return raw JSON only, no markdown fences, no commentary"""
 
 
+def _parse_llm_response(content: str) -> dict:
+    """Clean and parse LLM JSON response."""
+    content = content.strip()
+    if content.startswith("```"):
+        content = content.split("\n", 1)[1]
+        if content.endswith("```"):
+            content = content[:-3]
+    return json.loads(content)
+
+
 def parse_with_azure(text: str, slug: str, api_key: str, endpoint: str,
                      deployment: str, api_version: str) -> dict:
-    """Parse using Azure OpenAI API."""
     url = (f"{endpoint.rstrip('/')}/openai/deployments/{deployment}"
            f"/chat/completions?api-version={api_version}")
-
     payload = json.dumps({
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
@@ -109,26 +105,15 @@ def parse_with_azure(text: str, slug: str, api_key: str, endpoint: str,
         "temperature": 0,
         "max_tokens": 16000,
     }).encode("utf-8")
-
     req = urllib.request.Request(url, data=payload, headers={
-        "Content-Type": "application/json",
-        "api-key": api_key,
+        "Content-Type": "application/json", "api-key": api_key,
     }, method="POST")
-
     with urllib.request.urlopen(req, timeout=120) as resp:
         data = json.loads(resp.read().decode("utf-8"))
-
-    content = data["choices"][0]["message"]["content"].strip()
-    if content.startswith("```"):
-        content = content.split("\n", 1)[1]
-        if content.endswith("```"):
-            content = content[:-3]
-
-    return json.loads(content)
+    return _parse_llm_response(data["choices"][0]["message"]["content"])
 
 
 def parse_with_openai(text: str, slug: str, api_key: str) -> dict:
-    """Parse using OpenAI API."""
     payload = json.dumps({
         "model": "gpt-4o",
         "messages": [
@@ -138,38 +123,29 @@ def parse_with_openai(text: str, slug: str, api_key: str) -> dict:
         "temperature": 0,
         "max_tokens": 16000,
     }).encode("utf-8")
-
     req = urllib.request.Request(
         "https://api.openai.com/v1/chat/completions",
         data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {api_key}",
-        },
+        headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"},
         method="POST"
     )
-
     with urllib.request.urlopen(req, timeout=120) as resp:
         data = json.loads(resp.read().decode("utf-8"))
-
-    content = data["choices"][0]["message"]["content"].strip()
-    if content.startswith("```"):
-        content = content.split("\n", 1)[1]
-        if content.endswith("```"):
-            content = content[:-3]
-
-    return json.loads(content)
+    return _parse_llm_response(data["choices"][0]["message"]["content"])
 
 
-def validate(data: dict) -> bool:
-    """Basic validation of parsed leaderboard data."""
-    if not isinstance(data.get("models"), list) or len(data["models"]) == 0:
-        return False
-    required = {"rank", "model"}
-    for m in data["models"]:
-        if not required.issubset(m.keys()):
-            return False
-    return True
+def normalize_license(lic):
+    """Normalize license to 'proprietary' | 'open' | None."""
+    if not isinstance(lic, str):
+        return None
+    lic_lower = lic.lower()
+    if lic_lower == "proprietary":
+        return "proprietary"
+    if lic_lower in ("open", "open source", "open-source"):
+        return "open"
+    if any(kw in lic_lower for kw in ("mit", "apache", "bsd", "gpl", "cc-", "community", "non-commercial")):
+        return "open"
+    return "open"  # default non-proprietary to open
 
 
 def main():
@@ -187,10 +163,17 @@ def main():
         print("ERROR: Set OPENAI_API_KEY or AZURE_OPENAI_KEY + AZURE_ENDPOINT", file=sys.stderr)
         sys.exit(1)
 
-    backend = "Azure OpenAI" if use_azure else "OpenAI"
-    print(f"Using {backend}", file=sys.stderr)
+    print(f"Using {'Azure OpenAI' if use_azure else 'OpenAI'}", file=sys.stderr)
 
-    # Step 1: Discover leaderboards from overview page
+    # Load schemas
+    repo_root = Path(__file__).resolve().parent.parent
+    schema_dir = repo_root / "schemas"
+    lb_schema = json.loads((schema_dir / "leaderboard.json").read_text())
+    idx_schema = json.loads((schema_dir / "index.json").read_text())
+    lb_validator = Draft202012Validator(lb_schema)
+    idx_validator = Draft202012Validator(idx_schema)
+
+    # Discover leaderboards
     print("\nDiscovering leaderboards from overview...", file=sys.stderr)
     overview_text = fetch_page(ARENA_BASE, jina_key)
     leaderboards = discover_leaderboards(overview_text)
@@ -200,11 +183,8 @@ def main():
         print("ERROR: No leaderboards discovered", file=sys.stderr)
         sys.exit(1)
 
-    # Output dirs
-    repo_root = Path(__file__).resolve().parent.parent
     now = datetime.now(timezone.utc)
     date_str = now.strftime("%Y-%m-%d")
-
     day_dir = repo_root / "data" / date_str
     day_dir.mkdir(parents=True, exist_ok=True)
 
@@ -216,13 +196,13 @@ def main():
         print(f"Processing: {slug}", file=sys.stderr)
 
         try:
-            # Fetch
+            # 1. Fetch
             url = f"{ARENA_BASE}{url_path}"
             print(f"  Fetching {url}...", file=sys.stderr)
             text = fetch_page(url, jina_key)
             print(f"  Got {len(text)} chars", file=sys.stderr)
 
-            # Parse
+            # 2. Parse with LLM
             print(f"  Parsing with LLM...", file=sys.stderr)
             if use_azure:
                 parsed = parse_with_azure(text, slug, azure_key, azure_endpoint,
@@ -230,13 +210,10 @@ def main():
             else:
                 parsed = parse_with_openai(text, slug, openai_key)
 
-            # Validate
-            if not validate(parsed):
-                raise ValueError(f"Validation failed for {slug}")
+            if not isinstance(parsed.get("models"), list) or len(parsed["models"]) == 0:
+                raise ValueError("LLM returned no models")
 
-            print(f"  ✅ Got {len(parsed['models'])} models", file=sys.stderr)
-
-            # Build output (unified schema)
+            # 3. Build output + normalize
             output = {
                 "meta": {
                     "leaderboard": slug,
@@ -248,52 +225,56 @@ def main():
                 "models": parsed["models"],
             }
 
-            # Ensure every model has all fields (unified schema)
             for m in output["models"]:
                 m.setdefault("rank", None)
                 m.setdefault("model", None)
                 m.setdefault("vendor", None)
-                m.setdefault("license", None)
                 m.setdefault("score", None)
                 m.setdefault("ci", None)
                 m.setdefault("votes", None)
-                # Normalize license to "proprietary" | "open" | null
-                lic = m.get("license")
-                if isinstance(lic, str):
-                    lic_lower = lic.lower()
-                    if lic_lower == "proprietary":
-                        m["license"] = "proprietary"
-                    elif lic_lower in ("open", "open source", "open-source"):
-                        m["license"] = "open"
-                    elif any(kw in lic_lower for kw in ("mit", "apache", "bsd", "gpl", "cc-", "community", "non-commercial")):
-                        m["license"] = "open"
-                    else:
-                        m["license"] = "open"  # default non-proprietary to open
+                m["license"] = normalize_license(m.get("license"))
 
-            # Write
+            # 4. Schema validation
+            print(f"  Validating schema...", file=sys.stderr)
+            schema_errors = list(lb_validator.iter_errors(output))
+            if schema_errors:
+                err_msgs = [f"{e.json_path}: {e.message}" for e in schema_errors[:5]]
+                raise ValueError(f"Schema validation failed: {'; '.join(err_msgs)}")
+
+            print(f"  ✅ {len(parsed['models'])} models, schema valid", file=sys.stderr)
+
+            # 5. Write
             fp = day_dir / f"{slug}.json"
             with open(fp, "w") as f:
                 json.dump(output, f, indent=2, ensure_ascii=False)
             print(f"  Wrote {fp}", file=sys.stderr)
 
             results[slug] = len(parsed["models"])
-
-            # Rate limit courtesy
             time.sleep(2)
 
         except Exception as e:
             print(f"  ❌ Error: {e}", file=sys.stderr)
             errors.append({"leaderboard": slug, "error": str(e)})
 
-    # Write index
+    # Write & validate index
     index = {
         "date": date_str,
         "fetched_at": now.isoformat(),
         "leaderboards": {slug: {"model_count": count} for slug, count in results.items()},
         "errors": errors,
     }
+    idx_errors = list(idx_validator.iter_errors(index))
+    if idx_errors:
+        print(f"  ❌ Index schema invalid: {idx_errors[0].message}", file=sys.stderr)
+
     with open(day_dir / "_index.json", "w") as f:
         json.dump(index, f, indent=2, ensure_ascii=False)
+
+    # Write latest.json pointer
+    latest = {"date": date_str, "path": date_str}
+    with open(repo_root / "data" / "latest.json", "w") as f:
+        json.dump(latest, f, indent=2)
+    print(f"\nUpdated data/latest.json → {date_str}", file=sys.stderr)
 
     # Summary
     print(f"\n{'='*50}", file=sys.stderr)
@@ -305,8 +286,7 @@ def main():
         for e in errors:
             print(f"  {e['leaderboard']}: {e['error']}", file=sys.stderr)
         sys.exit(1)
-    
-    # If any leaderboard failed, exit non-zero (partial failure)
+
     if len(results) < len(leaderboards):
         print(f"FAIL: only {len(results)}/{len(leaderboards)} succeeded", file=sys.stderr)
         sys.exit(1)
