@@ -6,9 +6,7 @@ Arena.ai doesn't provide a public API, and its frontend format changes frequentl
 
 ## Leaderboards
 
-Leaderboard categories are **discovered automatically** from the [overview page](https://arena.ai/leaderboard/). Currently tracked:
-
-Text · Code · Vision · Document · Text-to-Image · Image Edit · Search · Text-to-Video · Image-to-Video · Video Edit
+Leaderboard categories are **discovered automatically** from the [overview page](https://arena.ai/leaderboard/) — no hardcoded list. When arena.ai adds or removes a category, the scraper picks it up automatically.
 
 ## Data Structure
 
@@ -19,8 +17,6 @@ data/
     text.json
     code.json
     text-to-video.json
-    ...
-  2026-03-20/
     ...
 ```
 
@@ -60,24 +56,6 @@ data/
 | `score` | int | ELO/Arena score |
 | `ci` | int \| null | Confidence interval (±) |
 | `votes` | int | Total vote count |
-
-## How It Works
-
-1. GitHub Actions runs daily at 08:00 UTC
-2. Overview page is scraped to discover all leaderboard categories
-3. [Jina Reader](https://jina.ai/reader/) fetches each leaderboard page as clean text
-4. LLM (Azure OpenAI) parses text into structured JSON
-5. JSON validation ensures data integrity
-6. Results committed to the repo
-
-## Usage
-
-Fetch the latest text-to-video leaderboard:
-```bash
-# Find the latest date
-LATEST=$(ls -d data/2026-* | sort | tail -1)
-curl -s "https://raw.githubusercontent.com/oolong-tea-2026/arena-ai-leaderboards/main/$LATEST/text-to-video.json" | jq '.models[:5]'
-```
 
 ## License
 
