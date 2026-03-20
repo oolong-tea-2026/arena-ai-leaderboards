@@ -12,8 +12,9 @@ Leaderboard categories are **discovered automatically** from the [overview page]
 
 ```
 data/
-  2026-03-19/              # Daily snapshot
-    _index.json            # Summary + metadata
+  latest.json              # Points to the most recent snapshot date
+  2026-03-19/
+    _index.json            # Run summary (date, fetched_at, per-category model counts, errors)
     text.json
     code.json
     text-to-video.json
@@ -21,6 +22,8 @@ data/
 ```
 
 ### JSON Schema (unified across all leaderboards)
+
+See `schemas/leaderboard.json` and `schemas/index.json` for formal definitions.
 
 ```json
 {
@@ -52,10 +55,10 @@ data/
 | `rank` | int | Position in leaderboard |
 | `model` | string | Model name as shown on arena.ai |
 | `vendor` | string \| null | Organization (Google, OpenAI, Anthropic, ...) |
-| `license` | string \| null | `"proprietary"` or `"open"` |
-| `score` | int | ELO/Arena score |
+| `license` | `"proprietary"` \| `"open"` \| null | License category |
+| `score` | int \| null | ELO/Arena score |
 | `ci` | int \| null | Confidence interval (±) |
-| `votes` | int | Total vote count |
+| `votes` | int \| null | Total vote count |
 
 ## License
 
