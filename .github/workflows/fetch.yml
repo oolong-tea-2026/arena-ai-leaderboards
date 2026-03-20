@@ -2,7 +2,7 @@ name: Fetch Arena Leaderboards
 
 on:
   schedule:
-    - cron: '0 2 * * *'  # Daily at 02:00 UTC (19:00 PT / 10:00 CST)
+    - cron: '37 1 * * *'  # Daily at 01:37 UTC (09:37 CST)
   workflow_dispatch:       # Manual trigger
 
 permissions:
