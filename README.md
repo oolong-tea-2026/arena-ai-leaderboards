@@ -57,7 +57,22 @@ data/
 
 ## 🔌 Quick Access
 
-**Raw JSON (no auth needed):**
+### REST API (recommended)
+
+Free, no auth needed. Hosted on **[api.wulong.dev](https://api.wulong.dev)**:
+
+```bash
+# List all leaderboards with model counts
+curl https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboards
+
+# Get a specific leaderboard (latest)
+curl https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard?name=text
+
+# Get a specific date
+curl https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard?name=text-to-video&date=2026-03-21
+```
+
+### Raw GitHub JSON
 
 ```bash
 # Latest snapshot pointer
@@ -65,22 +80,16 @@ curl https://raw.githubusercontent.com/oolong-tea-2026/arena-ai-leaderboards/mai
 
 # Today's LLM leaderboard
 curl https://raw.githubusercontent.com/oolong-tea-2026/arena-ai-leaderboards/main/data/2026-03-21/text.json
-
-# Today's video generation leaderboard
-curl https://raw.githubusercontent.com/oolong-tea-2026/arena-ai-leaderboards/main/data/2026-03-21/text-to-video.json
 ```
 
-**Python:**
+### Python
 
 ```python
-import requests, json
+import requests
 
-latest = requests.get(
-    "https://raw.githubusercontent.com/oolong-tea-2026/arena-ai-leaderboards/main/data/latest.json"
-).json()
-
+# Via API
 text = requests.get(
-    f"https://raw.githubusercontent.com/oolong-tea-2026/arena-ai-leaderboards/main/data/{latest['date']}/text.json"
+    "https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard?name=text"
 ).json()
 
 for m in text["models"][:10]:
