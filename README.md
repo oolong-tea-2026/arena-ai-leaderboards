@@ -132,23 +132,6 @@ Every leaderboard file follows a unified schema. See [`schemas/`](schemas/) for 
 | `ci` | int \| null | 95% confidence interval (±) |
 | `votes` | int \| null | Total vote count |
 
-## 🤖 How It Works
-
-1. **GitHub Actions** runs daily at ~01:37 UTC
-2. **Auto-discovers** all leaderboard categories from [arena.ai/leaderboard](https://arena.ai/leaderboard/) (no hardcoded list)
-3. **Fetches** full model rankings via [Jina Reader](https://jina.ai/reader/) (markdown extraction)
-4. **Parses** with Azure OpenAI into structured JSON
-5. **Validates** against JSON Schema
-6. **Commits** to `data/{YYYY-MM-DD}/`
-
-New categories added by Arena AI are picked up automatically.
-
-## 💡 Why This Exists
-
-- **Arena AI has no public API** — scraping their frontend is fragile
-- **No historical data** — the website only shows current rankings
-- **This repo provides**: stable JSON format, daily snapshots, full history, schema validation
-- **Use cases**: research, model comparison dashboards, trend analysis, automated monitoring
 
 ## 🌟 10 Leaderboard Categories
 
