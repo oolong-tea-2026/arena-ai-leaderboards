@@ -2,9 +2,9 @@
   "meta": {
     "leaderboard": "vision",
     "source_url": "https://arena.ai/leaderboard/vision",
-    "fetched_at": "2026-04-01T07:02:46.587410+00:00",
-    "last_updated": null,
-    "model_count": 20
+    "fetched_at": "2026-04-01T07:06:25.173738+00:00",
+    "last_updated": "Mar 31, 2026",
+    "model_count": 30
   },
   "models": [
     {
@@ -186,6 +186,96 @@
       "score": 1235,
       "ci": 9,
       "votes": 7841
+    },
+    {
+      "rank": 21,
+      "model": "gpt-5.2",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1229,
+      "ci": 9,
+      "votes": 9549
+    },
+    {
+      "rank": 22,
+      "model": "grok-4.20-multi-agent-beta-0309",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1228,
+      "ci": 13,
+      "votes": 2578
+    },
+    {
+      "rank": 23,
+      "model": "qwen3.5-27b",
+      "vendor": "Alibaba",
+      "license": "open",
+      "score": 1227,
+      "ci": 11,
+      "votes": 3891
+    },
+    {
+      "rank": 24,
+      "model": "gemini-2.5-flash-preview-09-2025",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1226,
+      "ci": 10,
+      "votes": 4851
+    },
+    {
+      "rank": 25,
+      "model": "gpt-4.5-preview-2025-02-27",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1226,
+      "ci": 11,
+      "votes": 2925
+    },
+    {
+      "rank": 26,
+      "model": "gpt-5-chat",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1225,
+      "ci": 7,
+      "votes": 42427
+    },
+    {
+      "rank": 27,
+      "model": "qwen3.5-122b-a10b",
+      "vendor": "Alibaba",
+      "license": "open",
+      "score": 1219,
+      "ci": 11,
+      "votes": 4206
+    },
+    {
+      "rank": 28,
+      "model": "ernie-5.0-preview-1220",
+      "vendor": "Baidu",
+      "license": "proprietary",
+      "score": 1218,
+      "ci": 12,
+      "votes": 3258
+    },
+    {
+      "rank": 29,
+      "model": "o3-2025-04-16",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1218,
+      "ci": 7,
+      "votes": 48322
+    },
+    {
+      "rank": 30,
+      "model": "qwen3-vl-235b-a22b-instruct",
+      "vendor": "Alibaba",
+      "license": "open",
+      "score": 1215,
+      "ci": 8,
+      "votes": 12487
     }
   ]
 }

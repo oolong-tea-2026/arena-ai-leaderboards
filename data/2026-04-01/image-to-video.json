@@ -2,7 +2,7 @@
   "meta": {
     "leaderboard": "image-to-video",
     "source_url": "https://arena.ai/leaderboard/image-to-video",
-    "fetched_at": "2026-04-01T07:02:46.587410+00:00",
+    "fetched_at": "2026-04-01T07:06:25.173738+00:00",
     "last_updated": "Mar 6, 2026",
     "model_count": 37
   },
@@ -272,7 +272,7 @@
       "rank": 30,
       "model": "hunyuan-video-1.5",
       "vendor": "Tencent",
-      "license": "proprietary",
+      "license": null,
       "score": 1193,
       "ci": 15,
       "votes": 5429
@@ -308,7 +308,7 @@
       "rank": 34,
       "model": "ltx-2-19b",
       "vendor": "lightricks",
-      "license": "proprietary",
+      "license": null,
       "score": 1126,
       "ci": 7,
       "votes": 48785
