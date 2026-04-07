@@ -1,0 +1,344 @@
+{
+  "meta": {
+    "leaderboard": "image-to-video",
+    "source_url": "https://arena.ai/leaderboard/image-to-video",
+    "fetched_at": "2026-04-07T06:24:17.729404+00:00",
+    "last_updated": null,
+    "model_count": 37
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model": "grok-imagine-video-720p",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1404,
+      "ci": 6,
+      "votes": 66616
+    },
+    {
+      "rank": 2,
+      "model": "veo-3.1-audio-1080p",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1402,
+      "ci": 12,
+      "votes": 9786
+    },
+    {
+      "rank": 3,
+      "model": "veo-3.1-audio",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1395,
+      "ci": 11,
+      "votes": 23406
+    },
+    {
+      "rank": 4,
+      "model": "veo-3.1-fast-audio-1080p",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1383,
+      "ci": 13,
+      "votes": 10273
+    },
+    {
+      "rank": 5,
+      "model": "grok-imagine-video-480p",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1381,
+      "ci": 9,
+      "votes": 19518
+    },
+    {
+      "rank": 6,
+      "model": "veo-3.1-fast-audio",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1380,
+      "ci": 10,
+      "votes": 51820
+    },
+    {
+      "rank": 7,
+      "model": "vidu-q3-pro",
+      "vendor": "Shengshu",
+      "license": "proprietary",
+      "score": 1353,
+      "ci": 8,
+      "votes": 37094
+    },
+    {
+      "rank": 8,
+      "model": "wan2.5-i2v-preview",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "score": 1339,
+      "ci": 12,
+      "votes": 12023
+    },
+    {
+      "rank": 9,
+      "model": "kling-v3-pro",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "score": 1334,
+      "ci": 11,
+      "votes": 4111
+    },
+    {
+      "rank": 10,
+      "model": "veo-3-audio",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1331,
+      "ci": 11,
+      "votes": 34535
+    },
+    {
+      "rank": 11,
+      "model": "veo-3-fast-audio",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1322,
+      "ci": 9,
+      "votes": 43885
+    },
+    {
+      "rank": 12,
+      "model": "seedance-v1.5-pro",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "score": 1300,
+      "ci": 9,
+      "votes": 68850
+    },
+    {
+      "rank": 13,
+      "model": "wan2.6-i2v",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "score": 1297,
+      "ci": 14,
+      "votes": 14157
+    },
+    {
+      "rank": 14,
+      "model": "kling-2.6-pro",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "score": 1289,
+      "ci": 9,
+      "votes": 67714
+    },
+    {
+      "rank": 15,
+      "model": "pixverse-v5.6",
+      "vendor": "Pixverse",
+      "license": "proprietary",
+      "score": 1279,
+      "ci": 13,
+      "votes": 3911
+    },
+    {
+      "rank": 16,
+      "model": "seedance-v1-pro",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "score": 1272,
+      "ci": 7,
+      "votes": 36448
+    },
+    {
+      "rank": 17,
+      "model": "kling-2.5-turbo-1080p",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "score": 1272,
+      "ci": 12,
+      "votes": 3871
+    },
+    {
+      "rank": 18,
+      "model": "veo-3-fast",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1256,
+      "ci": 9,
+      "votes": 27848
+    },
+    {
+      "rank": 19,
+      "model": "hailuo-2.3",
+      "vendor": "MiniMax",
+      "license": "proprietary",
+      "score": 1255,
+      "ci": 7,
+      "votes": 72452
+    },
+    {
+      "rank": 20,
+      "model": "veo-3",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1254,
+      "ci": 10,
+      "votes": 27715
+    },
+    {
+      "rank": 21,
+      "model": "vidu-q2-turbo",
+      "vendor": "Shengshu",
+      "license": "proprietary",
+      "score": 1244,
+      "ci": 17,
+      "votes": 2477
+    },
+    {
+      "rank": 22,
+      "model": "kling-v2.1-master",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "score": 1232,
+      "ci": 7,
+      "votes": 32229
+    },
+    {
+      "rank": 23,
+      "model": "hailuo-02-pro",
+      "vendor": "MiniMax",
+      "license": "proprietary",
+      "score": 1228,
+      "ci": 10,
+      "votes": 23821
+    },
+    {
+      "rank": 24,
+      "model": "kling-v2.1-standard",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "score": 1225,
+      "ci": 8,
+      "votes": 32238
+    },
+    {
+      "rank": 25,
+      "model": "vidu-q2-pro",
+      "vendor": "Shengshu",
+      "license": "proprietary",
+      "score": 1224,
+      "ci": 16,
+      "votes": 2562
+    },
+    {
+      "rank": 26,
+      "model": "hailuo-02-standard",
+      "vendor": "MiniMax",
+      "license": "proprietary",
+      "score": 1222,
+      "ci": 9,
+      "votes": 23636
+    },
+    {
+      "rank": 27,
+      "model": "ray-3",
+      "vendor": "Luma AI",
+      "license": "proprietary",
+      "score": 1221,
+      "ci": 19,
+      "votes": 1578
+    },
+    {
+      "rank": 28,
+      "model": "p-video",
+      "vendor": "Pruna",
+      "license": "proprietary",
+      "score": 1195,
+      "ci": 13,
+      "votes": 8919
+    },
+    {
+      "rank": 29,
+      "model": "hailuo-02-fast",
+      "vendor": "MiniMax",
+      "license": "proprietary",
+      "score": 1194,
+      "ci": 10,
+      "votes": 24563
+    },
+    {
+      "rank": 30,
+      "model": "hunyuan-video-1.5",
+      "vendor": "Tencent",
+      "license": null,
+      "score": 1193,
+      "ci": 15,
+      "votes": 5429
+    },
+    {
+      "rank": 31,
+      "model": "seedance-v1-lite",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "score": 1182,
+      "ci": 7,
+      "votes": 36093
+    },
+    {
+      "rank": 32,
+      "model": "wan-v2.2-a14b",
+      "vendor": "Alibaba",
+      "license": "open",
+      "score": 1167,
+      "ci": 9,
+      "votes": 29434
+    },
+    {
+      "rank": 33,
+      "model": "veo-2",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1164,
+      "ci": 16,
+      "votes": 11532
+    },
+    {
+      "rank": 34,
+      "model": "ltx-2-19b",
+      "vendor": "lightricks",
+      "license": null,
+      "score": 1126,
+      "ci": 7,
+      "votes": 48785
+    },
+    {
+      "rank": 35,
+      "model": "ray2",
+      "vendor": "Luma AI",
+      "license": "proprietary",
+      "score": 1104,
+      "ci": 16,
+      "votes": 10821
+    },
+    {
+      "rank": 36,
+      "model": "runway-gen4-turbo",
+      "vendor": "Runway",
+      "license": "proprietary",
+      "score": 1047,
+      "ci": 13,
+      "votes": 7506
+    },
+    {
+      "rank": 37,
+      "model": "pika-v2.2",
+      "vendor": "Pika",
+      "license": "proprietary",
+      "score": 994,
+      "ci": 13,
+      "votes": 9453
+    }
+  ]
+}
