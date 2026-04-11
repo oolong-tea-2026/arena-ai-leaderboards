@@ -1,0 +1,37 @@
+{
+  "date": "2026-04-11",
+  "fetched_at": "2026-04-11T04:06:10.069776+00:00",
+  "leaderboards": {
+    "code": {
+      "model_count": 60
+    },
+    "document": {
+      "model_count": 13
+    },
+    "image-edit": {
+      "model_count": 41
+    },
+    "image-to-video": {
+      "model_count": 38
+    },
+    "search": {
+      "model_count": 25
+    },
+    "text": {
+      "model_count": 30
+    },
+    "text-to-image": {
+      "model_count": 54
+    },
+    "text-to-video": {
+      "model_count": 38
+    },
+    "video-edit": {
+      "model_count": 4
+    },
+    "vision": {
+      "model_count": 20
+    }
+  },
+  "errors": []
+}
