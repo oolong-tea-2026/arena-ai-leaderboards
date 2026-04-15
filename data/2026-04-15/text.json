@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "leaderboard": "text",
+    "source_url": "https://arena.ai/leaderboard/text",
+    "fetched_at": "2026-04-15T04:32:25.996462+00:00",
+    "last_updated": null,
+    "model_count": 20
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model": "claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1502,
+      "ci": 5,
+      "votes": 17219
+    },
+    {
+      "rank": 2,
+      "model": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1496,
+      "ci": 5,
+      "votes": 18377
+    },
+    {
+      "rank": 3,
+      "model": "muse-spark",
+      "vendor": "Meta",
+      "license": "proprietary",
+      "score": 1495,
+      "ci": 9,
+      "votes": 4182
+    },
+    {
+      "rank": 4,
+      "model": "gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1493,
+      "ci": 5,
+      "votes": 21708
+    },
+    {
+      "rank": 5,
+      "model": "gemini-3-pro",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1486,
+      "ci": 4,
+      "votes": 41578
+    },
+    {
+      "rank": 6,
+      "model": "grok-4.20-beta1",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1485,
+      "ci": 6,
+      "votes": 10884
+    },
+    {
+      "rank": 7,
+      "model": "gpt-5.4-high",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1481,
+      "ci": 6,
+      "votes": 10633
+    },
+    {
+      "rank": 8,
+      "model": "grok-4.20-beta-0309-reasoning",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1479,
+      "ci": 6,
+      "votes": 10713
+    },
+    {
+      "rank": 9,
+      "model": "gpt-5.2-chat-latest-20260210",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1476,
+      "ci": 5,
+      "votes": 16810
+    },
+    {
+      "rank": 10,
+      "model": "grok-4.20-multi-agent-beta-0309",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1476,
+      "ci": 6,
+      "votes": 11079
+    },
+    {
+      "rank": 11,
+      "model": "gemini-3-flash",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1474,
+      "ci": 4,
+      "votes": 30922
+    },
+    {
+      "rank": 12,
+      "model": "claude-opus-4-5-20251101-thinking-32k",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1473,
+      "ci": 4,
+      "votes": 37292
+    },
+    {
+      "rank": 13,
+      "model": "glm-5.1",
+      "vendor": "Z.ai",
+      "license": "open",
+      "score": 1471,
+      "ci": 7,
+      "votes": 6274
+    },
+    {
+      "rank": 14,
+      "model": "grok-4.1-thinking",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1470,
+      "ci": 4,
+      "votes": 48508
+    },
+    {
+      "rank": 15,
+      "model": "claude-opus-4-5-20251101",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1469,
+      "ci": 4,
+      "votes": 48318
+    },
+    {
+      "rank": 16,
+      "model": "gpt-5.4",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1466,
+      "ci": 6,
+      "votes": 10990
+    },
+    {
+      "rank": 17,
+      "model": "qwen3.5-max-preview",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "score": 1466,
+      "ci": 7,
+      "votes": 8774
+    },
+    {
+      "rank": 18,
+      "model": "gemini-3-flash (thinking-minimal)",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1462,
+      "ci": 4,
+      "votes": 34519
+    },
+    {
+      "rank": 19,
+      "model": "claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1461,
+      "ci": 6,
+      "votes": 10935
+    },
+    {
+      "rank": 20,
+      "model": "dola-seed-2.0-pro",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "score": 1460,
+      "ci": 5,
+      "votes": 19770
+    }
+  ]
+}
