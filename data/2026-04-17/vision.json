@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "leaderboard": "vision",
+    "source_url": "https://arena.ai/leaderboard/vision",
+    "fetched_at": "2026-04-17T04:35:40.974901+00:00",
+    "last_updated": null,
+    "model_count": 40
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model": "claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1302,
+      "ci": 13,
+      "votes": 2683
+    },
+    {
+      "rank": 2,
+      "model": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1293,
+      "ci": 13,
+      "votes": 2889
+    },
+    {
+      "rank": 3,
+      "model": "muse-spark",
+      "vendor": "Meta",
+      "license": "proprietary",
+      "score": 1292,
+      "ci": 15,
+      "votes": 1624
+    },
+    {
+      "rank": 4,
+      "model": "gemini-3-pro",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1288,
+      "ci": 8,
+      "votes": 13370
+    },
+    {
+      "rank": 5,
+      "model": "gpt-5.2-chat-latest-20260210",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1277,
+      "ci": 9,
+      "votes": 7294
+    },
+    {
+      "rank": 6,
+      "model": "gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1277,
+      "ci": 8,
+      "votes": 10407
+    },
+    {
+      "rank": 7,
+      "model": "claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1274,
+      "ci": 12,
+      "votes": 3155
+    },
+    {
+      "rank": 8,
+      "model": "gemini-3-flash",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1269,
+      "ci": 7,
+      "votes": 16453
+    },
+    {
+      "rank": 9,
+      "model": "dola-seed-2.0-preview",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "score": 1258,
+      "ci": 10,
+      "votes": 4632
+    },
+    {
+      "rank": 10,
+      "model": "gemini-3-flash (thinking-minimal)",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1256,
+      "ci": 7,
+      "votes": 14514
+    },
+    {
+      "rank": 11,
+      "model": "gpt-5.1-high",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1250,
+      "ci": 8,
+      "votes": 9367
+    },
+    {
+      "rank": 12,
+      "model": "gpt-5.4-mini-high",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1248,
+      "ci": 12,
+      "votes": 3543
+    },
+    {
+      "rank": 13,
+      "model": "gpt-5.2-high",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1248,
+      "ci": 8,
+      "votes": 10280
+    },
+    {
+      "rank": 14,
+      "model": "grok-4.20-beta-0309-reasoning",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1246,
+      "ci": 10,
+      "votes": 4478
+    },
+    {
+      "rank": 15,
+      "model": "kimi-k2.5-thinking",
+      "vendor": "Moonshot",
+      "license": "open",
+      "score": 1245,
+      "ci": 8,
+      "votes": 10207
+    },
+    {
+      "rank": 16,
+      "model": "gemini-2.5-pro",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1245,
+      "ci": 6,
+      "votes": 84145
+    },
+    {
+      "rank": 17,
+      "model": "qwen3.5-397b-a17b",
+      "vendor": "Alibaba",
+      "license": "open",
+      "score": 1242,
+      "ci": 9,
+      "votes": 7634
+    },
+    {
+      "rank": 18,
+      "model": "chatgpt-4o-latest-20250326",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1240,
+      "ci": 6,
+      "votes": 23727
+    },
+    {
+      "rank": 19,
+      "model": "kimi-k2.5-instant",
+      "vendor": "Moonshot",
+      "license": "open",
+      "score": 1239,
+      "ci": 11,
+      "votes": 3942
+    },
+    {
+      "rank": 20,
+      "model": "gemini-3.1-flash-lite-preview",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1238,
+      "ci": 9,
+      "votes": 9187
+    },
+    {
+      "rank": 21,
+      "model": "gpt-5.1",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1236,
+      "ci": 8,
+      "votes": 10233
+    },
+    {
+      "rank": 22,
+      "model": "grok-4.20-multi-agent-beta-0309",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1234,
+      "ci": 11,
+      "votes": 4082
+    },
+    {
+      "rank": 23,
+      "model": "gpt-5.2",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1234,
+      "ci": 8,
+      "votes": 10971
+    },
+    {
+      "rank": 24,
+      "model": "gemini-2.5-flash-preview-09-2025",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1226,
+      "ci": 10,
+      "votes": 4797
+    },
+    {
+      "rank": 25,
+      "model": "gpt-4.5-preview-2025-02-27",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1226,
+      "ci": 11,
+      "votes": 2925
+    },
+    {
+      "rank": 26,
+      "model": "qwen3.5-27b",
+      "vendor": "Alibaba",
+      "license": "open",
+      "score": 1225,
+      "ci": 10,
+      "votes": 5219
+    },
+    {
+      "rank": 27,
+      "model": "gpt-5-chat",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1225,
+      "ci": 7,
+      "votes": 41710
+    },
+    {
+      "rank": 28,
+      "model": "qwen3.5-122b-a10b",
+      "vendor": "Alibaba",
+      "license": "open",
+      "score": 1221,
+      "ci": 10,
+      "votes": 5630
+    },
+    {
+      "rank": 29,
+      "model": "ernie-5.0-preview-1220",
+      "vendor": "Baidu",
+      "license": "proprietary",
+      "score": 1218,
+      "ci": 12,
+      "votes": 3222
+    },
+    {
+      "rank": 30,
+      "model": "o3-2025-04-16",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1217,
+      "ci": 7,
+      "votes": 47579
+    },
+    {
+      "rank": 31,
+      "model": "qwen3-vl-235b-a22b-instruct",
+      "vendor": "Alibaba",
+      "license": "open",
+      "score": 1215,
+      "ci": 8,
+      "votes": 12363
+    },
+    {
+      "rank": 32,
+      "model": "gpt-4.1-2025-04-14",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1214,
+      "ci": 7,
+      "votes": 42960
+    },
+    {
+      "rank": 33,
+      "model": "gemini-2.5-flash",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1213,
+      "ci": 6,
+      "votes": 53692
+    },
+    {
+      "rank": 34,
+      "model": "gpt-5-high",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1211,
+      "ci": 7,
+      "votes": 35813
+    },
+    {
+      "rank": 35,
+      "model": "claude-sonnet-4-20250514-thinking-32k",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1207,
+      "ci": 17,
+      "votes": 1190
+    },
+    {
+      "rank": 36,
+      "model": "claude-opus-4-20250514-thinking-16k",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1207,
+      "ci": 16,
+      "votes": 1337
+    },
+    {
+      "rank": 37,
+      "model": "gpt-4.1-mini-2025-04-14",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1202,
+      "ci": 8,
+      "votes": 42187
+    },
+    {
+      "rank": 38,
+      "model": "o4-mini-2025-04-16",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1201,
+      "ci": 7,
+      "votes": 43270
+    },
+    {
+      "rank": 39,
+      "model": "claude-3-7-sonnet-20250219-thinking-32k",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1196,
+      "ci": 15,
+      "votes": 1485
+    },
+    {
+      "rank": 40,
+      "model": "gpt-5.4-nano-high",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1195,
+      "ci": 12,
+      "votes": 3504
+    }
+  ]
+}
