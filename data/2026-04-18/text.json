@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "leaderboard": "text",
+    "source_url": "https://arena.ai/leaderboard/text",
+    "fetched_at": "2026-04-18T04:17:02.407253+00:00",
+    "last_updated": null,
+    "model_count": 20
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model": "claude-opus-4-7-thinking",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1505,
+      "ci": 11,
+      "votes": 2618
+    },
+    {
+      "rank": 2,
+      "model": "claude-opus-4-6-thinking",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1503,
+      "ci": 5,
+      "votes": 18144
+    },
+    {
+      "rank": 3,
+      "model": "claude-opus-4-7",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1498,
+      "ci": 10,
+      "votes": 3485
+    },
+    {
+      "rank": 4,
+      "model": "claude-opus-4-6",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1497,
+      "ci": 5,
+      "votes": 19373
+    },
+    {
+      "rank": 5,
+      "model": "muse-spark",
+      "vendor": "Meta",
+      "license": "proprietary",
+      "score": 1496,
+      "ci": 8,
+      "votes": 5155
+    },
+    {
+      "rank": 6,
+      "model": "gemini-3.1-pro-preview",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1492,
+      "ci": 5,
+      "votes": 22905
+    },
+    {
+      "rank": 7,
+      "model": "gemini-3-pro",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1486,
+      "ci": 4,
+      "votes": 41404
+    },
+    {
+      "rank": 8,
+      "model": "grok-4.20-beta1",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1485,
+      "ci": 6,
+      "votes": 12069
+    },
+    {
+      "rank": 9,
+      "model": "gpt-5.4-high",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1482,
+      "ci": 6,
+      "votes": 11568
+    },
+    {
+      "rank": 10,
+      "model": "grok-4.20-beta-0309-reasoning",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1480,
+      "ci": 6,
+      "votes": 11661
+    },
+    {
+      "rank": 11,
+      "model": "gpt-5.2-chat-latest-20260210",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1477,
+      "ci": 5,
+      "votes": 17827
+    },
+    {
+      "rank": 12,
+      "model": "grok-4.20-multi-agent-beta-0309",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1476,
+      "ci": 6,
+      "votes": 12049
+    },
+    {
+      "rank": 13,
+      "model": "gemini-3-flash",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1474,
+      "ci": 4,
+      "votes": 30817
+    },
+    {
+      "rank": 14,
+      "model": "claude-opus-4-5-20251101-thinking-32k",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1473,
+      "ci": 4,
+      "votes": 37184
+    },
+    {
+      "rank": 15,
+      "model": "glm-5.1",
+      "vendor": "Z.ai",
+      "license": "open",
+      "score": 1472,
+      "ci": 7,
+      "votes": 7179
+    },
+    {
+      "rank": 16,
+      "model": "grok-4.1-thinking",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1470,
+      "ci": 4,
+      "votes": 49408
+    },
+    {
+      "rank": 17,
+      "model": "claude-opus-4-5-20251101",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1469,
+      "ci": 4,
+      "votes": 49272
+    },
+    {
+      "rank": 18,
+      "model": "gpt-5.4",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1468,
+      "ci": 6,
+      "votes": 11988
+    },
+    {
+      "rank": 19,
+      "model": "qwen3.5-max-preview",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "score": 1467,
+      "ci": 7,
+      "votes": 9591
+    },
+    {
+      "rank": 20,
+      "model": "claude-sonnet-4-6",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1463,
+      "ci": 6,
+      "votes": 11255
+    }
+  ]
+}
