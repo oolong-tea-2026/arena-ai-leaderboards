@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "leaderboard": "video-edit",
+    "source_url": "https://arena.ai/leaderboard/video-edit",
+    "fetched_at": "2026-04-19T04:38:02.616313+00:00",
+    "last_updated": "Apr 14, 2026",
+    "model_count": 5
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model": "happyhorse-1.0",
+      "vendor": "Alibaba-ATH",
+      "license": "proprietary",
+      "score": 1299,
+      "ci": 21,
+      "votes": 505
+    },
+    {
+      "rank": 2,
+      "model": "grok-imagine-video",
+      "vendor": "xAI",
+      "license": "proprietary",
+      "score": 1257,
+      "ci": 15,
+      "votes": 8183
+    },
+    {
+      "rank": 3,
+      "model": "kling-o3-pro",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "score": 1251,
+      "ci": 17,
+      "votes": 4402
+    },
+    {
+      "rank": 4,
+      "model": "runway-gen4-aleph",
+      "vendor": "Runway",
+      "license": "proprietary",
+      "score": 1216,
+      "ci": 13,
+      "votes": 5170
+    },
+    {
+      "rank": 5,
+      "model": "kling-o1-pro",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "score": 1208,
+      "ci": 15,
+      "votes": 5909
+    }
+  ]
+}
