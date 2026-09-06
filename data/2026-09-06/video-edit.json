@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "leaderboard": "video-edit",
+    "source_url": "https://arena.ai/leaderboard/video-edit",
+    "fetched_at": "2026-09-06T07:01:02.255546+00:00",
+    "last_updated": "Aug 26, 2026",
+    "model_count": 10
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model": "wan3.0",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "score": 1414.0,
+      "ci": 26.0,
+      "votes": 463
+    },
+    {
+      "rank": 2,
+      "model": "dreamina-seedance-2.5-720p",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "score": 1410.0,
+      "ci": 26.0,
+      "votes": 429
+    },
+    {
+      "rank": 3,
+      "model": "minimax-h3",
+      "vendor": "MiniMax",
+      "license": "open",
+      "score": 1392.0,
+      "ci": 19.0,
+      "votes": 962
+    },
+    {
+      "rank": 4,
+      "model": "gemini-omni-flash",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1367.0,
+      "ci": 15.0,
+      "votes": 2109
+    },
+    {
+      "rank": 5,
+      "model": "dreamina-seedance-2.0-720p",
+      "vendor": "Bytedance",
+      "license": "proprietary",
+      "score": 1365.0,
+      "ci": 14.0,
+      "votes": 3852
+    },
+    {
+      "rank": 6,
+      "model": "happyhorse-1.0",
+      "vendor": "Alibaba-ATH",
+      "license": "proprietary",
+      "score": 1307.0,
+      "ci": 14.0,
+      "votes": 3116
+    },
+    {
+      "rank": 7,
+      "model": "grok-imagine-video",
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "score": 1258.0,
+      "ci": 10.0,
+      "votes": 13724
+    },
+    {
+      "rank": 8,
+      "model": "kling-o3-pro",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "score": 1255.0,
+      "ci": 11.0,
+      "votes": 7540
+    },
+    {
+      "rank": 9,
+      "model": "kling-o1-pro",
+      "vendor": "KlingAI",
+      "license": "proprietary",
+      "score": 1197.0,
+      "ci": 10.0,
+      "votes": 10542
+    },
+    {
+      "rank": 10,
+      "model": "runway-gen4-aleph",
+      "vendor": "Runway",
+      "license": "proprietary",
+      "score": 1182.0,
+      "ci": 9.0,
+      "votes": 9818
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "leaderboard": "code",
+    "source_url": "https://arena.ai/leaderboard/code",
+    "fetched_at": "2026-09-06T07:01:02.255546+00:00",
+    "last_updated": "Sep 5, 2026",
+    "model_count": 20
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model": "gpt-6-astra-max",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1797.0,
+      "ci": 24.0,
+      "votes": 1199
+    },
+    {
+      "rank": 2,
+      "model": "claude-fable-5.1-max",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1762.0,
+      "ci": 16.0,
+      "votes": 2275
+    },
+    {
+      "rank": 3,
+      "model": "claude-opus-5-max",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1688.0,
+      "ci": 8.0,
+      "votes": 10904
+    },
+    {
+      "rank": 4,
+      "model": "qwen3.8-max-0902",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "score": 1686.0,
+      "ci": 16.0,
+      "votes": 1868
+    },
+    {
+      "rank": 5,
+      "model": "kimi-k3-max",
+      "vendor": "Moonshot",
+      "license": "proprietary",
+      "score": 1674.0,
+      "ci": 11.0,
+      "votes": 4546
+    },
+    {
+      "rank": 6,
+      "model": "qwen3.8-max",
+      "vendor": "Alibaba",
+      "license": "proprietary",
+      "score": 1670.0,
+      "ci": 12.0,
+      "votes": 3223
+    },
+    {
+      "rank": 7,
+      "model": "claude-opus-5-high",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1661.0,
+      "ci": 7.0,
+      "votes": 10928
+    },
+    {
+      "rank": 8,
+      "model": "claude-fable-5",
+      "vendor": "Anthropic",
+      "license": "proprietary",
+      "score": 1629.0,
+      "ci": 8.0,
+      "votes": 9356
+    },
+    {
+      "rank": 9,
+      "model": "qwen3.8-flash-next",
+      "vendor": "Alibaba",
+      "license": "open",
+      "score": 1626.0,
+      "ci": 14.0,
+      "votes": 2158
+    },
+    {
+      "rank": 10,
+      "model": "grok-4.6-high",
+      "vendor": "SpaceXAI",
+      "license": "proprietary",
+      "score": 1625.0,
+      "ci": 11.0,
+      "votes": 3487
+    },
+    {
+      "rank": 11,
+      "model": "muse-spark-1.3 (xHigh)",
+      "vendor": "Meta",
+      "license": "proprietary",
+      "score": 1622.0,
+      "ci": 18.0,
+      "votes": 1274
+    },
+    {
+      "rank": 12,
+      "model": "hy4-preview",
+      "vendor": "Tencent",
+      "license": "open",
+      "score": 1621.0,
+      "ci": 16.0,
+      "votes": 1661
+    },
+    {
+      "rank": 13,
+      "model": "gpt-5.6-sol-xhigh (codex-harness)",
+      "vendor": "OpenAI",
+      "license": "proprietary",
+      "score": 1617.0,
+      "ci": 7.0,
+      "votes": 11014
+    },
+    {
+      "rank": 14,
+      "model": "glm-5.3-max",
+      "vendor": "Z.ai",
+      "license": "open",
+      "score": 1609.0,
+      "ci": 12.0,
+      "votes": 2930
+    },
+    {
+      "rank": 15,
+      "model": "glm-5.3-flash",
+      "vendor": "Z.ai",
+      "license": "open",
+      "score": 1605.0,
+      "ci": 15.0,
+      "votes": 1961
+    },
+    {
+      "rank": 16,
+      "model": "qwen3.8-27b",
+      "vendor": "Alibaba",
+      "license": "open",
+      "score": 1594.0,
+      "ci": 11.0,
+      "votes": 3543
+    },
+    {
+      "rank": 17,
+      "model": "gemini-3.7-flash-high",
+      "vendor": "Google",
+      "license": "proprietary",
+      "score": 1587.0,
+      "ci": 12.0,
+      "votes": 3008
+    },
+    {
+      "rank": 18,
+      "model": "glm-5.2-max",
+      "vendor": "Z.ai",
+      "license": "open",
+      "score": 1587.0,
+      "ci": 7.0,
+      "votes": 9836
+    },
+    {
+      "rank": 19,
+      "model": "deepseek-v4-pro-high-20260813",
+      "vendor": "DeepSeek",
+      "license": "open",
+      "score": 1582.0,
+      "ci": 11.0,
+      "votes": 3518
+    },
+    {
+      "rank": 20,
+      "model": "deepseek-v4-flash-high",
+      "vendor": "DeepSeek",
+      "license": "open",
+      "score": 1580.0,
+      "ci": 10.0,
+      "votes": 4177
+    }
+  ]
+}
